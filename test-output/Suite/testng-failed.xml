@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Second device Test(failed)">
+    <parameter name="platformVersion" value=""/>
+    <parameter name="deviceName" value="emulator-5556"/>
+    <parameter name="portNumber" value="4724"/>
+    <classes>
+      <class name="testcases.TextPage_Test">
+        <methods>
+          <include name="verify_TextMenu_Screen"/>
+          <include name="tearDown"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- testcases.TextPage_Test -->
+    </classes>
+  </test> <!-- Second device Test(failed) -->
+  <test thread-count="5" parallel="tests" name="First Device Test(failed)">
+    <parameter name="platformVersion" value=""/>
+    <parameter name="deviceName" value="emulator-5554"/>
+    <parameter name="portNumber" value="4726"/>
+    <classes>
+      <class name="testcases.ContentPage_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verify_ContentMenu_Screen" invocation-numbers="0"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- testcases.ContentPage_Test -->
+    </classes>
+  </test> <!-- First Device Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
